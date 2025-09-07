@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Web Assignment</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+</head>
+<body>
+  <header>
+    <h1>Welcome to Jusper's Interactive Page</h1>
+    <button id="theme-toggle">Change to Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- Form Section -->
+    <section id="form-section">
+      <h2>Signup Form</h2>
+      <form id="signup-form" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"/>
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"/>
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"/>
+        <span class="error" id="passwordError"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="form-success" class="hidden">Form submitted successfully!</div>
+    </section>
+
+    <!-- Interactive Section 1: Filtered List -->
+    <section id="filter-section">
+      <h2>Filterable List</h2>
+      <input type="text" id="filter-input" placeholder="Type to filter items"/>
+      <ul id="item-list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+        <li>Date</li>
+        <li>Elderberry</li>
+      </ul>
+    </section>
+
+    <!-- Interactive Section 2: Counter -->
+    <section id="counter-section">
+      <h2>Counter</h2>
+      <button id="decrement">-</button>
+      <span id="count">0</span>
+      <button id="increment">+</button>
+    </section>
+
+    <!-- Collapsible FAQ Section -->
+    <section id="faq-section">
+      <h2>FAQs</h2>
+      <div class="faq-item">
+        <button class="faq-question">What does this page do?</button>
+        <div class="faq-answer">This page showcases interactive web features.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How is form validation handled?</button>
+        <div class="faq-answer">Form validation is done using custom JavaScript checks, not default HTML5 validation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How can I change the theme to dark?</button>
+        <div class="faq-answer">You can do that by clicking the button labbled "Change to Dark Mode".</div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
